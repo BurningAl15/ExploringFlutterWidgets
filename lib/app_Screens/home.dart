@@ -7,6 +7,10 @@ final containerColor=Colors.deepPurple[50];
 
 final textFontSize=30.0;
 final textFontFamily='Amatic';
+AssetImage assetImage1=AssetImage('Assets/bb2.jpeg');
+AssetImage assetImage2=AssetImage('Assets/bby.jpeg');
+Image img1=Image(image:assetImage1,width: 250.0,height:300.0,);
+Image img2=Image(image:assetImage2,width: 250.0,height:300.0,);
 
 class Home extends StatelessWidget{
   @override
@@ -99,10 +103,30 @@ class Home extends StatelessWidget{
                   ),
                 ]
             ),
-
+            Row(
+                children:<Widget>[
+                  //FlightImageAsset()
+                  Expanded(
+                      child: img1
+                  ),
+                  Expanded(
+                      child:img2
+                  )
+                ]
+            )
          ],
         )
       )
     );
+  }
+}
+
+class FlightImageAsset extends StatelessWidget{
+  @override
+  Widget build(BuildContext context)
+  {
+    AssetImage assetImage=AssetImage('Assets/bb2.jpeg');
+    Image img=Image(image:assetImage,width: 250.0,height:300.0);
+    return Container(child:img);
   }
 }
