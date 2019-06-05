@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 final containerTextColor=Colors.grey[600];
 final containerWidth=400.0;
 final containerHeight=100.0;
+final textFontSize=75.0;
+final textFontFamily='Amatic';
 
 class Home extends StatelessWidget{
   @override
@@ -20,7 +22,13 @@ class Home extends StatelessWidget{
         child:Text(
             'Flight',
             textDirection:TextDirection.ltr,
-            style: TextStyle(color:containerTextColor)
+              style: TextStyle(
+                color:containerTextColor,
+                decoration: TextDecoration.none,
+                fontSize:textFontSize,
+                fontFamily: textFontFamily,
+                //fontWeight: FontWeight.w300
+              )
         ),
 
       )
