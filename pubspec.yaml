@@ -44,7 +44,7 @@ flutter:
   assets:
     - Assets/bb2.jpeg
     - Assets/bby.jpeg
-
+    - Assets/INART_Logo.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
@@ -69,5 +69,15 @@ flutter:
        fonts:
        - asset: fonts/AmaticSC-Bold.ttf
        - asset: fonts/AmaticSC-Regular.ttf
+     - family: GreatVibe
+       fonts:
+       - asset: fonts/GreatVibes-Regular.ttf
+     - family: DancingScript
+       fonts:
+       - asset: fonts/DancingScript-Bold.ttf
+       - asset: fonts/DancingScript-Regular.ttf
+
+
+
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
