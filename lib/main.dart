@@ -27,7 +27,13 @@ void main(){
     //home:Home(),
     home:Scaffold(
         appBar:AppBar(title: Text("Long List"),),
-        body:getListView()
+        body:getListView(),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){
+          },
+          child: Icon(Icons.add),
+          tooltip:'Add One More Item',
+        ),
     )
   ));
 }
@@ -111,7 +117,9 @@ Widget getListView(){
                     color: color(),)
               )
             ),
-          onTap: ()=> debugPrint('${listItems[index]} was tapped'),
+          //onTap: ()=> debugPrint('${listItems[index]} was tapped'),
+          onTap: ()=> showSnackBar(context,listItems[index])
+        ,
       );
     },
   );
@@ -146,4 +154,16 @@ MaterialColor color(){
 
 IconData icons(){
   return possibleIcons.elementAt(RandColor(possibleIcons.length));
+}
+
+void showSnackBar(BuildContext context, String item){
+  var snackBar=SnackBar(
+    content:Text("You just tapped $item"),
+    action:SnackBarAction(
+      label: "UNDO",
+      onPressed: () =>debugPrint('Performing dummy UNDO operation'),
+    ),
+  );
+
+  Scaffold.of(context).showSnackBar(snackBar);
 }
